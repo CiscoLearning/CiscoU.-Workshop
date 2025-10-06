@@ -37,8 +37,9 @@ To fully complete this workshop, you will need access to a Cisco Modeling Labs s
 
 The two lab topologies are available for download here:
 
-- [Hands On Lab: AI Generated Network Configurations](raw gh link)
-- [Hands On Lab: Python Network Automation](raw gh link)
+- [Hands On Lab: AI Generated Network Configurations](https://raw.githubusercontent.com/CiscoLearning/CiscoU.-Workshop/refs/heads/main/assets/Hands_On_Lab__AI_Generated_Network_Configurations.yaml
+)
+- [Hands On Lab: Python Network Automation](https://raw.githubusercontent.com/CiscoLearning/CiscoU.-Workshop/refs/heads/main/assets/Hands_On_Lab__Python_Network_Automation.yaml)
 
 If you have your own instance of Cisco Modeling Labs 2.9, you will need to follow [these instructions](https://github.com/CiscoDevNet/cml-community/tree/master/node-definitions/opensource/code-server-custom-4.102) to install the [CodeServer](https://hub.docker.com/r/linuxserver/code-server) container, which provides a web-based IDE for Python development.
 
