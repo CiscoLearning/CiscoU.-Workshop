@@ -1,0 +1,50 @@
+enable
+! 
+config terminal
+!
+hostname client-switch
+!
+ip domain name example.com
+!
+username cisco privilege 15 secret cisco
+!
+ip ssh version 2
+!
+vlan 10 
+ name ADMIN
+! 
+vlan 60 
+ name OFFICE
+!
+interface Ethernet0/0
+ switchport access vlan 10
+ switchport mode access
+ no shutdown
+!
+interface Ethernet0/1
+ switchport access vlan 60
+ switchport mode access
+ no shutdown
+!
+interface Ethernet0/3
+ no switchport
+ ip address 172.18.0.2 255.255.255.252
+ no shutdown
+!
+interface Vlan10
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+!
+interface Vlan60
+ ip address 192.168.60.1 255.255.255.0
+ no shutdown
+!
+ip route 0.0.0.0 0.0.0.0 172.18.0.1
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+end
+! 
+crypto key generate rsa general mod 2048

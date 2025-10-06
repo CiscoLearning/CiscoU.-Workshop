@@ -1,0 +1,56 @@
+enable
+! 
+config terminal
+!
+hostname server-switch
+!
+ip domain name example.com
+!
+username cisco privilege 15 secret cisco
+!
+ip ssh version 2
+!
+vlan 2001
+ name WEB
+! 
+vlan 2002
+ name DATA
+! 
+vlan 2000
+ name MGMT
+!
+interface Ethernet0/0
+ switchport access vlan 2001
+ switchport mode access
+ no shutdown
+!
+interface Ethernet0/3
+ no switchport
+ ip address 172.18.1.2 255.255.255.252
+ no shutdown
+!
+interface Vlan2001
+ ip address 10.20.1.1 255.255.255.0
+ no shutdown
+!
+interface Vlan2023
+ ip address 10.20.23.1 255.255.255.0
+ no shutdown
+!
+interface Vlan2000
+ ip address 10.20.0.1 255.255.255.0
+ no shutdown
+!
+router ospf 1 
+ network 10.20.1.0 0.0.0.255 area 0
+ network 10.20.23.0 0.0.0.255 area 0 
+ network 10.20.0.0 0.0.0.255 area 0
+ network 172.18.1.0 0.0.0.3 area 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+end
+! 
+crypto key generate rsa general mod 2048

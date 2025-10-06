@@ -1,0 +1,37 @@
+enable
+! 
+config terminal
+!
+hostname router
+!
+ip domain name example.com
+!
+username cisco privilege 15 secret cisco
+!
+ip ssh version 2
+!
+!
+interface Ethernet0/0
+ ip add 172.18.0.1 255.255.255.252
+ no shutdown
+!
+interface Ethernet0/1
+ ip address 172.18.1.1 255.255.255.252
+ no shutdown
+!
+!
+router ospf 1 
+ network 172.18.1.0 0.0.0.3 area 0
+ default-information originate always
+ redistribute static
+!
+ip route 192.168.10.0 255.255.255.0 172.18.0.2
+ip route 192.168.60.0 255.255.255.0 172.18.0.2
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+end
+! 
+crypto key generate rsa general mod 2048

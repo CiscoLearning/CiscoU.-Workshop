@@ -1,0 +1,718 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      VLAN    ID      Network
+      ADMIN   10      192.168.10.0/24
+      OFFICE  60      192.168.60.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -760.0
+    y1: 80.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#777575'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      client-switch Config Notes:
+      * client-switch is to be configured as Layer 3 switch, with VLAN
+        interfaces for each network.
+      * Use the first address in each network as default
+        gateway.
+      * Link to router should be an l3 interface.
+      * Default route to router.
+      * Configure link to 'office-users' as access port
+    text_font: monospace
+    text_italic: true
+    text_size: 8
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -800.0
+    y1: 200.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#777575'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      server-switch Config Notes:
+      * server-switch is to be configured as Layer 3 switch, with VLAN
+        interfaces for each network.
+      * Use the first address in each network as default
+        gateway.
+      * Link to router should be an l3 interface.
+      * Configure OSPF Area 0 on link to router
+    text_font: monospace
+    text_italic: true
+    text_size: 8
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -200.0
+    y1: 200.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      VLAN    ID      Network
+      WEB     2001    10.20.01.0/24
+      DATA    2023    10.20.23.0/24
+      MGMT    2000    10.20.00.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -200.0
+    y1: 80.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#777575'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      router Config Notes:
+      * Use the 1st IP for the router, 2nd for connected device
+      * Configure OSPF Area 0 on link to server-switch
+      * Static routes for "Users" networks to client-switch
+      * Redistribute Static -> OSPF
+    text_font: monospace
+    text_italic: true
+    text_size: 8
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -240.0
+    y1: -320.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Link                        Network
+      router / client-switch      172.18.0.0/30
+      router / server-switch      172.18.1.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -240.0
+    y1: -200.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#777575'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      General Network Config Notes:
+      * Create local admin user cisco / cisco
+      * Enable SSH, disable telnet
+      * Configure hostname, and domain (example.com)
+    text_font: monospace
+    text_italic: true
+    text_size: 8
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -800.0
+    y1: -320.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: Cisco Network Academy Partner Workshop
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -799.0
+    y1: -464.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 'Hands On Lab: AI Generated Network Configurations'
+    text_font: monospace
+    text_italic: false
+    text_size: 18
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -800.0
+    y1: -440.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Use Generative AI to create configurations for the switches and routers in this topology. Experiment
+      with different prompting strategies including zero shot, few shot examples, image processing, etc.
+      Compare the resulting configurations to what you would manually configure.
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -799.0
+    y1: -411.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#034270'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      Network Web Address:
+      http://10.20.1.101
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -61.58834226065595
+    y1: -97.47627706815005
+    z_index: 0
+smart_annotations:
+  - tag: users
+    is_on: true
+    padding: 70
+    label: Users
+    tag_offset_x: 0
+    tag_offset_y: 54
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#C72A2880'
+    border_color: '#00000080'
+    z_index: 1
+  - tag: Servers
+    is_on: true
+    padding: 70
+    label: Servers
+    tag_offset_x: 0
+    tag_offset_y: 30
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#A4C8E180'
+    border_color: '#00000080'
+    z_index: 2
+nodes:
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: router
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -320
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: client-switch
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags:
+      - users
+    x: -480
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: boot.sh
+        content: |-
+          # insert commands here, e.g. a static IP address
+          ip address add dev eth0 192.168.10.11/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.10.1
+          exit 0
+      - name: environment
+        content: |-
+          # -- These are understood by the start script
+          # -- Homepage to open at start (needs network!)
+          HOME_URL=http://10.20.01.101
+          # -- Wait additional time for network before starting Chrome
+          WAIT=2
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: admin-user
+    node_definition: chrome
+    parameters: {}
+    ram: null
+    tags:
+      - users
+    x: -680
+    y: -80
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: boot.sh
+        content: |-
+          # Insert more commands here
+          ip address add dev eth0 10.20.1.101/24
+          ip link set dev eth0 up
+          ip route add default via 10.20.1.1
+          #
+
+          # Create a basic web page for the server
+          cat > /usr/share/nginx/html/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Network Configuration Dashboard</title>
+              <style>
+                  body {
+                      font-family: 'Courier New', monospace;
+                      background-color: #f4f4f4;
+                      color: #333;
+                      margin: 0;
+                      padding: 0;
+                  }
+
+                  header {
+                      background-color: #2c3e50;
+                      color: white;
+                      padding: 1em;
+                      text-align: center;
+                  }
+
+                  nav {
+                      background-color: #34495e;
+                      padding: 0.5em;
+                      text-align: center;
+                  }
+
+                  nav a {
+                      color: white;
+                      text-decoration: none;
+                      margin: 0 15px;
+                      font-weight: bold;
+                  }
+
+                  nav a:hover {
+                      text-decoration: underline;
+                  }
+
+                  .container {
+                      padding: 2em;
+                      background-color: white;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                      margin-top: 20px;
+                  }
+
+                  .ascii-art {
+                      text-align: center;
+                      font-size: 18px;
+                      color: #1abc9c;
+                  }
+
+                  table {
+                      width: 100%;
+                      border-collapse: collapse;
+                      margin-top: 1em;
+                  }
+
+                  table, th, td {
+                      border: 1px solid #ccc;
+                  }
+
+                  th, td {
+                      padding: 0.8em;
+                      text-align: left;
+                  }
+
+                  th {
+                      background-color: #34495e;
+                      color: white;
+                  }
+
+                  .footer {
+                      text-align: center;
+                      background-color: #2c3e50;
+                      color: white;
+                      padding: 1em;
+                      margin-top: 20px;
+                  }
+
+                  .footer a {
+                      color: #1abc9c;
+                      text-decoration: none;
+                  }
+              </style>
+          </head>
+          <body>
+
+          <header>
+              <h1>Internal Network Configuration</h1>
+              <p>Company's Centralized Network Management Dashboard</p>
+          </header>
+
+          <nav>
+              <a href="#overview">Overview</a>
+              <a href="#config">Configurations</a>
+              <a href="#status">Network Status</a>
+              <a href="#help">Help</a>
+          </nav>
+
+          <div class="container" id="overview">
+              <h2>🔧 Overview of Network Setup</h2>
+              <div class="ascii-art">
+                  <pre>
+           _____
+          /     \
+                 | admin |-----+
+                  \_____/      |
+                                       |
+                       +--------+--------+
+                       | client-switch    |
+                       +--------+--------+
+                                |
+                       +--------+--------+
+                       |   router (HQ)   |
+                       +--------+--------+
+                                |
+                       +--------+--------+
+                       | server-switch   |
+                       +--------+--------+
+                                |
+                       +--------+--------+
+                       |  web-server     |
+                       +-----------------+
+                  </pre>
+              </div>
+              <p>This diagram represents the network topology with admin and office users, client-switch, router (HQ), server-switch, and a web-server.</p>
+          </div>
+
+          <div class="container" id="config">
+              <h2>🔧 Network Configuration</h2>
+              <table>
+                  <tr>
+                      <th>Device</th>
+                      <th>IP Address</th>
+                      <th>Status</th>
+                  </tr>
+                  <tr>
+                      <td>Router (HQ)</td>
+                      <td>172.18.0.1</td>
+                      <td>Active</td>
+                  </tr>
+                  <tr>
+                      <td>Client Switch</td>
+                      <td>192.168.10.1</td>
+                      <td>Active</td>
+                  </tr>
+                  <tr>
+                      <td>Server Switch</td>
+                      <td>10.20.00.1</td>
+                      <td>Active</td>
+                  </tr>
+                  <tr>
+                      <td>Web Server</td>
+                      <td>10.20.01.1</td>
+                      <td>Active</td>
+                  </tr>
+              </table>
+          </div>
+
+          <div class="container" id="status">
+              <h2>🌐 Current Network Status</h2>
+              <div class="ascii-art">
+                  <pre>
+                  +----------------------------+
+                  |  Network Monitoring        |
+                  +----------------------------+
+                  |  Router (HQ): [  ✔  ]      |
+                  |  Client Switch: [  ✔  ]    |
+                  |  Server Switch: [  ✔  ]   |
+                  |  Web Server: [  ✔  ]      |
+                  +----------------------------+
+                  </pre>
+              </div>
+              <p>All devices are up and functioning. Network status is stable.</p>
+          </div>
+
+          <div class="container" id="help">
+              <h2>❓ Need Assistance?</h2>
+              <p>For help with network configurations, please refer to the <a href="#">Network Configuration Guide</a> or contact the IT support team.</p>
+          </div>
+
+          <div class="footer">
+              <p>Company Network Dashboard - © 2025</p>
+              <p><a href="#">Contact IT Support</a> | <a href="#">Privacy Policy</a></p>
+          </div>
+
+          </body>
+          </html>
+          EOF
+
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: web-server
+    node_definition: nginx
+    parameters: {}
+    ram: null
+    tags:
+      - Servers
+    x: 40
+    y: -40
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: server-switch
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags:
+      - Servers
+    x: -160
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: office-users
+    node_definition: unmanaged_switch
+    parameters: {}
+    ram: null
+    tags:
+      - users
+    x: -680
+    y: 0
+    interfaces:
+      - id: i0
+        label: port0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: port1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: port2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: port3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i4
+        label: port4
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i5
+        label: port5
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i6
+        label: port6
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i7
+        label: port7
+        mac_address: null
+        type: physical
+        slot: 7
+links:
+  - id: l0
+    n1: n2
+    n2: n1
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: admin-user-eth0<->client-switch-Ethernet0/0
+  - id: l1
+    n1: n1
+    n2: n0
+    i1: i4
+    i2: i1
+    conditioning: {}
+    label: client-switch-Ethernet0/3<->router-Ethernet0/0
+  - id: l2
+    n1: n0
+    n2: n4
+    i1: i2
+    i2: i4
+    conditioning: {}
+    label: router-Ethernet0/1<->server-switch-Ethernet0/3
+  - id: l3
+    n1: n4
+    n2: n3
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: server-switch-Ethernet0/0<->web-server-eth0
+  - id: l4
+    n1: n5
+    n2: n1
+    i1: i0
+    i2: i2
+    conditioning: {}
+    label: office-users-port0<->client-switch-Ethernet0/1
+lab:
+  description: ''
+  notes: ''
+  title: 'Hands On Lab: AI Generated Network Configurations'
+  version: 0.3.0

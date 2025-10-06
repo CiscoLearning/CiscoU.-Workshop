@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Configuration Dashboard</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 2em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .ascii-art {
+            text-align: center;
+            font-size: 18px;
+            color: #1abc9c;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 0.8em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 1em;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Internal Network Configuration</h1>
+    <p>Company's Centralized Network Management Dashboard</p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#config">Configurations</a>
+    <a href="#status">Network Status</a>
+    <a href="#help">Help</a>
+</nav>
+
+<div class="container" id="overview">
+    <h2>🔧 Overview of Network Setup</h2>
+    <div class="ascii-art">
+        <pre>
+ _____
+/     \
+       | admin |-----+
+        \_____/      |
+                             |        
+             +--------+--------+
+             | client-switch    |
+             +--------+--------+
+                      |
+             +--------+--------+
+             |   router (HQ)   |
+             +--------+--------+
+                      |
+             +--------+--------+
+             | server-switch   |
+             +--------+--------+
+                      |
+             +--------+--------+
+             |  web-server     |
+             +-----------------+
+        </pre>
+    </div>
+    <p>This diagram represents the network topology with admin and office users, client-switch, router (HQ), server-switch, and a web-server.</p>
+</div>
+
+<div class="container" id="config">
+    <h2>🔧 Network Configuration</h2>
+    <table>
+        <tr>
+            <th>Device</th>
+            <th>IP Address</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Router (HQ)</td>
+            <td>172.18.0.1</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>Client Switch</td>
+            <td>192.168.10.1</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>Server Switch</td>
+            <td>10.20.00.1</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>Web Server</td>
+            <td>10.20.01.1</td>
+            <td>Active</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container" id="status">
+    <h2>🌐 Current Network Status</h2>
+    <div class="ascii-art">
+        <pre>
+        +----------------------------+
+        |  Network Monitoring        |
+        +----------------------------+
+        |  Router (HQ): [  ✔  ]      |
+        |  Client Switch: [  ✔  ]    |
+        |  Server Switch: [  ✔  ]   |
+        |  Web Server: [  ✔  ]      |
+        +----------------------------+
+        </pre>
+    </div>
+    <p>All devices are up and functioning. Network status is stable.</p>
+</div>
+
+<div class="container" id="help">
+    <h2>❓ Need Assistance?</h2>
+    <p>For help with network configurations, please refer to the <a href="#">Network Configuration Guide</a> or contact the IT support team.</p>
+</div>
+
+<div class="footer">
+    <p>Company Network Dashboard - © 2025</p>
+    <p><a href="#">Contact IT Support</a> | <a href="#">Privacy Policy</a></p>
+</div>
+
+</body>
+</html>
