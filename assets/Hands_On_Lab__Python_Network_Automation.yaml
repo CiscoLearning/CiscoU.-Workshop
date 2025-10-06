@@ -578,15 +578,15 @@ nodes:
           # If the container is getting its IP via DHCP, uncomment
           # this sleep to ensure the DHCP process completes before
           # attempting to clone the repo
-          # sleep 10
+          sleep 30
           #    Recommend placing code in the /app/code directory for default workspace
-          # cd /app/code
+          cd /app/code
           #    Do the clone as the user "abc", which is the code-server user
-          # sudo -u abc git clone {REPO_ADDRESS}
+          sudo -u abc git clone https://github.com/CiscoLearning/CiscoU.-Workshop.git
           #    Install Python requirements file into the container virtual environment
           #     Note: Depending on internet speed and number of requirements, the
           #              installation can take significant time to complete.
-          # sudo -u abc /app/code/.venv/bin/python -m pip install -r {PROJECT_FOLDER}/requirements.txt
+          sudo -u abc /app/code/.venv/bin/python -m pip install -r /app/code/CiscoU.-Workshop/requirements.txt
 
           # End the script cleanly
           exit 0
