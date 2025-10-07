@@ -16,6 +16,7 @@
 - **Patrick Gargano**, Lead Content Advocate | Learn with Cisco
 - **Alexander Stevenson**, Technical Advocate | Learn with Cisco
 - **Quinn Snyder**, Senior Technical Advocate | Learn with Cisco
+- **Hank Preston**, Distinguished Architect | Learn with Cisco
 
 
 ### What you will learn
