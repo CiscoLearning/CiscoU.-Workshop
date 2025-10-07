@@ -1,5 +1,5 @@
 from netmiko import ConnectHandler
-from netmiko.ssh_exception import NetMikoTimeoutException, NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
 from cisco_devices import devices
 import os
 
@@ -13,7 +13,9 @@ if not USERNAME or not PASSWORD:
 def apply_config(device, config_commands):
     """Connect to a device and apply configuration commands."""
     try:
-        with ConnectHandler(**device) as connection:
+        # Create a copy of device dict without the 'name' key for ConnectHandler
+        device_config = {k: v for k, v in device.items() if k != 'name'}
+        with ConnectHandler(**device_config) as connection:
             print(f"Connected to {device['name']} ({device['host']})")
             
             # Send configuration commands to the device

@@ -1,9 +1,9 @@
-# K: Replace the "TODO" the imports section
-# to import the necessary modules and functions and uncomment the lines
+# J - Fill in the blanks in the imports section
+# to import the necessary modules and functions
 
-from netmiko import #TODO
-from netmiko.ssh_exception import NetMikoTimeoutException, NetMikoAuthenticationException
-from #TODO import devices
+from netmiko import ______________
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
+from _____________ import devices
 import os
 
 USERNAME = os.getenv("USERNAME")
@@ -16,14 +16,14 @@ if not USERNAME or not PASSWORD:
 def apply_config(device, config_commands):
     """Connect to a device and apply configuration commands."""
     try:
-        with ConnectHandler(**device) as connection:
+        # Create a copy of device dict without the 'name' key for ConnectHandler
+        device_config = {k: v for k, v in device.items() if k != 'name'}
+        with ConnectHandler(**device_config) as connection:
             print(f"Connected to {device['name']} ({device['host']})")
             
-            # L: Replace the "TODO" with the method to send configuration commands
+            # K - Fill-in the blank with the method to send configuration commands
             # This method is different from send_command() - it's specifically for config changes
-            # Hint: this can be determined from the function definition above
-
-            output = connection.send_config_set(#TODO)
+            output = connection.send_config_set(______________)
             print(f"Configuration applied to {device['name']}:")
             print(output)
             
@@ -47,7 +47,7 @@ def apply_config(device, config_commands):
 print("Starting configuration changes on all routers...")
 print("="*60)
 
-# M: Replace "TODO" with the code to complete the configuration for each device
+# L - Fill in the blanks to complete the configuration for each device
 # Each router will get a MOTD banner with unique hostname - Don't forget to add your own name!
 for device in devices:
     print(f"\nConfiguring {device['name']}...")
@@ -58,7 +58,7 @@ for device in devices:
         f"hostname {device['name']}",
         "banner motd ^",
         "Welcome to the Netmiko and CML Automation Lab!",
-        "This router has been configured by #TODO using Python and Netmiko!",
+        "This router has been configured by ______________ using Python and Netmiko!",
         "^"
     ]
     
