@@ -1,12 +1,14 @@
 from netmiko import ConnectHandler
-from netmiko.ssh_exception import NetMikoTimeoutException, NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
 from cisco_devices import devices
 
 # Function to connect to a device and run a command
 def run_command(device, command):
     """Connect to a device, run a command, and return the output."""
     try:
-        with ConnectHandler(**device) as connection:
+        # Create a copy of device dict without the 'name' key for ConnectHandler
+        device_config = {k: v for k, v in device.items() if k != 'name'}
+        with ConnectHandler(**device_config) as connection:
             output = connection.send_command(command)
             return output
     except NetMikoTimeoutException:

@@ -1,5 +1,5 @@
 from netmiko import ConnectHandler
-from netmiko.ssh_exception import NetMikoTimeoutException, NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
 import os
 
 USERNAME = os.getenv("USERNAME")

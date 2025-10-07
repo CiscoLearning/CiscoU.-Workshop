@@ -1,34 +1,32 @@
-# H: Replace the "TODO" in the  imports section to import 
-# the necessary modules and functions and uncomment the lines
-# Hint: you can use previous code examples and the lab instructions for help
+# G - Fill in the blanks in the imports section
+# to import the necessary modules and functions
 
-from netmiko import #TODO
-from netmiko.ssh_exception import NetMikoTimeoutException, NetMikoAuthenticationException
-from #TODO import devices
+from netmiko import ______________
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
+from _____________ import devices
 
-# I: Replace the "TODO" with the missing pieces to complete each code 
-# block to handle unexpected errors and uncomment the lines
-# Hint: the first replacement deals with docstrings while the others deal with exception handling
-
+# H - Fill in the blanks to complete each code block of the function
+# for handling unexpected behavior
 def run_command(device, command):
-    #TODO Connect to a device, run a command, and return the output.#TODO
+    ___Connect to a device, run a command, and return the output.___
     try:
-        with ConnectHandler(**device) as connection:
+        # Create a copy of device dict without the 'name' key for ConnectHandler
+        device_config = {k: v for k, v in device.items() if k != 'name'}
+        with ConnectHandler(**device_config) as connection:
             output = connection.send_command(command)
             return output
-    #TODO NetMikoTimeoutException:
+    ______ NetMikoTimeoutException:
         return f"Error: Connection to {device['name']} ({device['host']}) timed out"
-    #TODO NetMikoAuthenticationException:
+    ______ NetMikoAuthenticationException:
         return f"Error: Authentication failed for {device['name']} ({device['host']})"
-    #TODO Exception as e:
+    ______ Exception as e:
         return f"Unexpected error with {device['name']} ({device['host']}): {type(e).__name__}: {str(e)}"
 
-# J: Replace the "TODO" to complete each code block in the for loop
-# to loop through all the devices and run commands and uncomment the lines
-
-for #TODO in devices:
+# I - Fill in the blanks to complete each code block in the for loop
+# to loop through all the devices and run commands
+for ______ in devices:
     print(f"\n{'='*50}")
-    print(f"Connecting to {#TODO['name']} ({#TODO['host']})...")
+    print(f"Connecting to {______['name']} ({______['host']})...")
     
     # Show device uptime and version
     commands = [
