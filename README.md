@@ -8,16 +8,15 @@
 <a href="./day1/01-ai-in-networking/1.md"><img src="./images/start.png" width="300px"></a>
 </p>
 
-### Your Instructors
+### Meet your Learn with Cisco Team
 
 ![](./images/instructors.png)
 
-- **Kareem Iskander**, Principal Technical Advocate | Learn with Cisco
 - **Patrick Gargano**, Lead Content Advocate | Learn with Cisco
-- **Alexander Stevenson**, Technical Advocate | Learn with Cisco
 - **Quinn Snyder**, Senior Technical Advocate | Learn with Cisco
+- **Kareem Iskander**, Principal Technical Advocate | Learn with Cisco
 - **Hank Preston**, Distinguished Architect | Learn with Cisco
-
+- **Alexander Stevenson**, Technical Advocate | Learn with Cisco
 
 ### What you will learn
 
