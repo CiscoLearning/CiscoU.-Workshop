@@ -11,9 +11,8 @@
 
 ### Meet your Learn with Cisco Team
 
-![](./images/instructors.png)
+![](./images/instructors26.png)
 
-- **Alexander Stevenson**, Technical Advocate | Learn with Cisco
 - **Hank Preston**, Distinguished Architect | Learn with Cisco
 - **Kareem Iskander**, Principal Technical Advocate | Learn with Cisco
 - **Quinn Snyder**, Senior Technical Advocate | Learn with Cisco
