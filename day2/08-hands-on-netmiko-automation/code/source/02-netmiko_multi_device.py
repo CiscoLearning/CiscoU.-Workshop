@@ -44,11 +44,11 @@ for device in devices:
             print(f"Error executing command on {host}: {str(cmd_error)}")
             
         finally:
-            # E - fill in the blank with the name of method of the connection object
+            # F - fill in the blank with the name of method of the connection object
             # to close the connection to the devices
             connection.__________()
             print(f"Disconnected from {host}")
-    # F - fill in the blanks with the names of the exceptions to handle (Hint: you imported them)       
+    # G - fill in the blanks with the names of the exceptions to handle (Hint: you imported them)       
     except ______________________________:
         print(f"Connection to {host} timed out. Device may be unreachable.")
     except ______________________________:

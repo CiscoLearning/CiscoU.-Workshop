@@ -1,4 +1,4 @@
-# J - Fill in the blanks in the imports section
+# K - Fill in the blanks in the imports section
 # to import the necessary modules and functions
 
 from netmiko import ______________
@@ -21,7 +21,7 @@ def apply_config(device, config_commands):
         with ConnectHandler(**device_config) as connection:
             print(f"Connected to {device['name']} ({device['host']})")
             
-            # K - Fill-in the blank with the method to send configuration commands
+            # L - Fill-in the blank with the method to send configuration commands
             # This method is different from send_command() - it's specifically for config changes
             output = connection.send_config_set(______________)
             print(f"Configuration applied to {device['name']}:")
@@ -47,7 +47,7 @@ def apply_config(device, config_commands):
 print("Starting configuration changes on all routers...")
 print("="*60)
 
-# L - Fill in the blanks to complete the configuration for each device
+# M - Fill in the blanks to complete the configuration for each device
 # Each router will get a MOTD banner with unique hostname - Don't forget to add your own name!
 for device in devices:
     print(f"\nConfiguring {device['name']}...")
