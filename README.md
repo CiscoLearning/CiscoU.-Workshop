@@ -11,12 +11,9 @@
 
 ### Meet your Learn with Cisco Team
 
-![](./images/instructors26.png)
-
-- **Hank Preston**, Distinguished Architect | Learn with Cisco
-- **Kareem Iskander**, Principal Technical Advocate | Learn with Cisco
-- **Quinn Snyder**, Senior Technical Advocate | Learn with Cisco
 - **Patrick Gargano**, Lead Content Advocate | Learn with Cisco
+- **Kyle Winters**, Technical Consulting Engineer | Learn with Cisco
+- **Gabriela Neira**, Technical Project Manager | Learn with Cisco
 
 ### What you will learn
 
