@@ -12,7 +12,7 @@
 ### Meet your Learn with Cisco Team
 
 - **Patrick Gargano**, Lead Content Advocate | Learn with Cisco
-- **Kyle Winters**, Technical Consulting Engineer | Learn with Cisco
+- **Kyle Winters**, Senior Technical Advocate | Learn with Cisco
 - **Gabriela Neira**, Technical Project Manager | Learn with Cisco
 
 ### What you will learn
